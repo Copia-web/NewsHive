@@ -12,7 +12,7 @@ import Register from '../Register/Rgister';
 
 const menuList = [
   {id: 1, label:"Home", url:"/"},
-  {id: 2, label:"Business", url:"/"},
+  {id: 2, label:"Business", url:"/business-top-headlines"},
   {id: 3, label:"Entertainment", url:"/"},
   {id: 4, label:"Health Care", url:"/"},
   {id: 5, label:"Science", url:"/"},
@@ -51,9 +51,9 @@ export default function Header() {
       </div>
       <div className=' fixed top-16 xs:hidden sm:flex bg-slate-200 w-full  gap-4 justify-center ite h-9 '>
           {
-            menuList.map((i)=>{
+            menuList.map((i,index)=>{
               return(
-                <div className=''>
+                <div key={index}>
                   <Link to={i.url} className='font-poppins text-sm text-slate-700'>
                   {i.label}
                 </Link>
@@ -62,8 +62,11 @@ export default function Header() {
             })
           }
       </div>
-      <div className={` overflow-auto  h-screen w-72 rounded-r-md z-50 transform ${showMenu ?  "translate-x-0" : "-translate-x-full" } transition-transform duration-500 ease-in-out `}  >
+     {/*  <div className={` h-screen w-72 rounded-r-md z-50 transform ${showMenu ?  "translate-x-0" : "-translate-x-full" } transition-transform duration-500 ease-in-out `}  >
         <Navbar showMenu={showMenu} setShowMenu={setShowMenu}  />
+      </div> */}
+      <div className={`fixed  transform ${showMenu ?  "translate-x-0" : "-translate-x-full" } transition-transform duration-500 ease-in-out `}>
+        <Navbar/>
       </div>
       <Register modalDispaly={modalDispaly} setModalDispaly={setModalDispaly}>
         <div className="absolute top-24 ">

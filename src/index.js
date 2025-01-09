@@ -7,13 +7,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './components/Home/Home';
+import TopHeadlines from './components/Business/TopHeadlines';
 
 const router = createBrowserRouter([{
-  path:"/",
+  path:"newshive/",
   element:<App/>,
   children:[
     { index: true, element: <Home /> },
-   
+   {
+    path:"business-top-headlines",
+    element:<TopHeadlines/>
+   }
   ]
 },
 

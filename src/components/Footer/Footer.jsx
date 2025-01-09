@@ -25,9 +25,9 @@ export default function Footer() {
          <Link to='/' className='flex items-center gap-3 ml-2'><SiGooglenews className=' text-5xl text-cyan-800 cursor-pointer hover:animate-spin'/>
             <div className='text-slate-700 text-xl font-poppins font-semibold'>NewsHive
             </div></Link>
-        <div className='font-poppins flex gap-6  ml-2 text-gray-800 mb-2'>
+        <div className='font-poppins flex flex-wrap gap-6   ml-2 text-gray-800 mb-4'>
             {menuList.map((i,index)=>(
-                <div>
+                <div key={index}>
                     <Link to={i.url}>{i.label}</Link>
                 </div>
             ))}
@@ -37,10 +37,10 @@ export default function Footer() {
         </div>
         <div className='border-t-2 pt-4 '>
            <span className='flex gap-4 mb-3'>
-          <span className='font-poppins text-slate-700 f'> Follow us on:</span>
+          <span className='font-poppins text-slate-700 pl-2'> Follow us on:</span>
                 <FaFacebook className='text-2xl'/> <FaInstagram className='text-2xl'mSquare/> <FaLinkedin className='text-2xl'/> <FaTiktok className='text-2xl'/>  <FaTwitter className='text-2xl'/> <FaYoutube className='text-2xl'/>
             </span>
-            <span className='text-slate-700 font-poppins text-sm'>Terms of Use
+            <span className='text-slate-700 font-poppins text-sm inline-block m-2'>Terms of Use
                 About the BBC
                 Privacy Policy
                 Cookies
