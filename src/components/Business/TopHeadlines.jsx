@@ -33,14 +33,14 @@ export default function TopHeadlines() {
   return (
     <div className='w-full'>
          <div className='mt-28 p-2'>
-            <div className='font-poppins text-3xl font-semibold text-slate-700 border-b-2 border-e-2 border-s-2 text-center mb-4'>Business</div>
+            <div className=' text-2xl font-semibold text-slate-500 border-b-2 border-e-2 border-s-2 text-center mb-4'>Business News</div>
                     {/* Fetch Business News */}
              <div className='mb-8' >
                  <ShowData newsArray={business}/>
                  </div>
           {/*  Fetch other types of News */}
           <div >
-            <div className='font-poppins text-3xl font-semibold text-slate-700 border-b-2 text-center mb-4'>More News For You </div>
+            <div className=' text-2xl font-semibold text-slate-500 border-b-2 text-center mb-4'>More For You </div>
                  <ShowData newsArray={more}/>
                  </div>
         </div>

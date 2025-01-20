@@ -7,12 +7,12 @@ import { FcReading } from "react-icons/fc";
 
 
 import Footer from "../Footer/Footer";
-const general_url = process.env.REACT_APP_API_General_Url;
-const business_url = process.env.REACT_APP_API_Business_Url;
-const entertainment_url = process.env.REACT_APP_API_Entertaimnet_url;
-const healthCare_url = process.env.REACT_APP_API_HealthCare_url;
-const science_url = process.env.REACT_APP_API_Science_url;
-const tech_url = process.env.REACT_APP_API_Tech_url;
+const general_url =`https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=${process.env.REACT_APP_API_KEY}`;
+const business_url = `https://newsapi.org/v2/top-headlines?category=business&apiKey=${process.env.REACT_APP_API_KEY}`
+const entertainment_url = `https://newsapi.org/v2/top-headlines?category=entertainment&apiKey=${process.env.REACT_APP_API_KEY}`
+const healthCare_url =  `https://newsapi.org/v2/top-headlines?category=health&apiKey=${process.env.REACT_APP_API_KEY}`
+const science_url = `https://newsapi.org/v2/top-headlines?category=science&apiKey=${process.env.REACT_APP_API_KEY}`
+const tech_url = `https://newsapi.org/v2/top-headlines?category=technology&apiKey=${process.env.REACT_APP_API_KEY}`
 
 
 export default function Home() {
@@ -83,33 +83,35 @@ const [more, setMore] = useState([]);
 
   return (
     <div className="mt-24 bg-gray-100 w-full  "> 
-      <div className="flex flex-col divide-y-4 divide divide-slate-400  gap-8 p-4  ">
+      <div className="flex flex-col    gap-8 p-4  ">
         <div className="mt-4 flex-1">
-          <span className="text-md font-poppins text-gray-700 font-bold">Top Headlines <IoMdArrowDropright className="inline text-2xl"/><FcReading className="inline text-2xl"/></span>
+          <span className="inline-block text-lg text-gray-700 font-semibold mb-5">Top Headlines</span>
+          <div className="border-b-2 mb-4 border-slate-400 shadow-2xl"></div>
      <ShowData newsArray={home}/>
      </div>
      <div>
-          <span className="text-md font-poppins text-gray-700 font-bold">Business Insider <IoMdArrowDropright className="inline text-2xl"/></span>
+          <span className="ineline- block text-lg text-gray-700 font-semibold  mb-5">Business Insider </span>
+          <div className="border-b-2 mb-4 border-slate-400 shadow-2xl"></div>
      <ShowData newsArray={business}/>
      </div>
      <div>
-          <span className="text-md font-poppins text-gray-700 font-bold">Entertainment <IoMdArrowDropright className="inline text-2xl"/></span>
+          <span className="ineline- block text-lg text-gray-700 font-semibold  mb-5">Entertainment</span> <div className="border-b-2 mb-4 border-slate-400 shadow-2xl"></div>
      <ShowData newsArray={entertain}/>
      </div>
      <div>
-          <span className="text-md font-poppins text-gray-700 font-bold">Health Care  <IoMdArrowDropright className="inline text-2xl"/></span>
+          <span className="ineline- block text-lg text-gray-700 font-semibold  mb-5">Health Care</span> <div className="border-b-2 mb-4 border-slate-400 shadow-2xl"></div>
      <ShowData newsArray={healthCare}/>
      </div>
      <div>
-          <span className="text-md font-poppins text-gray-700 font-bold">Science <IoMdArrowDropright className="inline text-2xl"/></span>
+          <span className="ineline- block text-lg text-gray-700 font-semibold  mb-5">Science </span> <div className="border-b-2 mb-4 border-slate-400 shadow-2xl"></div>
      <ShowData newsArray={science}/>
      </div>
      <div>
-          <span className="text-md font-poppins text-gray-700 font-bold">Technology <IoMdArrowDropright className="inline text-2xl"/></span>
+          <span className="ineline- block text-lg text-gray-700 font-semibold  mb-5">Technology</span> <div className="border-b-2 mb-4 border-slate-400 shadow-2xl"></div>
      <ShowData newsArray={tech}/>
      </div>
      <div>
-          <span className="text-md font-poppins text-gray-700 font-bold">More News<IoMdArrowDropright className="inline text-2xl"/></span>
+          <span className="ineline- block text-lg text-gray-700 font-semibold  mb-5">More News</span> <div className="border-b-2 mb-4 border-slate-400 shadow-2xl"></div>
      <ShowData newsArray={more} more={true}/>
      </div>
      </div> 

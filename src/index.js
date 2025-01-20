@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import TopHeadlines from './components/Business/TopHeadlines';
+import NewsContent from './components/utils/NewsContent';
+import StockMarket from './components/Business/StockMarket';
 
 const router = createBrowserRouter([{
   path:"newshive/",
@@ -17,6 +19,14 @@ const router = createBrowserRouter([{
    {
     path:"business-top-headlines",
     element:<TopHeadlines/>
+   },
+   {
+    path:'news-content/:title',
+    element:<NewsContent/>
+   },
+   {
+    path:'stock-market',
+    element:<StockMarket/>
    }
   ]
 },
