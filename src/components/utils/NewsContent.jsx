@@ -42,7 +42,7 @@ export default function NewsContent() {
         </div>
         </div>
         <div className=''>
-            <div className=' text-2xl text-slate-500 mb-4 font-semibold'>MORE FOR YOU</div>
+            <div className='  mb-4 text-gray-700 font-semibold'>MORE FOR YOU</div>
             <div className='border-b-2 mb-6'></div>
            <ShowData newsArray={more}/>
         </div>

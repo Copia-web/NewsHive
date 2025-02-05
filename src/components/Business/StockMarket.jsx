@@ -3,7 +3,7 @@ import { fetchNews, ShowData } from '../utils/utils';
 import Footer from '../Footer/Footer';
 
 
-const stockMarket_url =`https://newsapi.org/v2/top-headlines?category=business&q=stocks&apiKey=${process.env.REACT_APP_API_KEY}`;
+const stockMarket_url =`https://newsapi.org/v2/everything?q=stock&domains=techcrunch.com,thenextweb.com&apiKey=${process.env.REACT_APP_API_KEY}`;
 const general_url = `https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=${process.env.REACT_APP_API_KEY}`;
 
 
@@ -28,14 +28,14 @@ useEffect(()=>{
 },[])
   return (
     <div className='mt-28'>
-       <div className=' text-2xl font-semibold text-slate-500 border-b-2 border-e-2 border-s-2 text-center mb-4'>Business News</div>
+       <div className=' text-gray-700  text-lg border-b-2 border-e-2 border-s-2 text-center mb-4'>Business News</div>
                            {/* Fetch Business News */}
                     <div className='mb-8' >
                         <ShowData newsArray={stocNews}/>
                         </div>
                  {/*  Fetch other types of News */}
                  <div >
-                   <div className=' text-2xl font-semibold text-slate-500 border-b-2 text-center mb-4'>More For You </div>
+                   <div className=' text-lg  text-gray-700  border-b-2 text-center mb-4'>More For You </div>
                         <ShowData newsArray={generalNews}/>
                         </div>
                <Footer/>

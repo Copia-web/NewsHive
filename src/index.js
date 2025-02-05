@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import {store, Store} from './Store/Store'
+import { Provider } from 'react-redux';
 import App from './App';
 import {
   createBrowserRouter,
@@ -10,6 +12,8 @@ import Home from './components/Home/Home';
 import TopHeadlines from './components/Business/TopHeadlines';
 import NewsContent from './components/utils/NewsContent';
 import StockMarket from './components/Business/StockMarket';
+import Startups from './components/Business/Startups';
+import News from './components/News/News'
 
 const router = createBrowserRouter([{
   path:"newshive/",
@@ -27,6 +31,14 @@ const router = createBrowserRouter([{
    {
     path:'stock-market',
     element:<StockMarket/>
+   },
+   {
+    path:'startups',
+    element:<Startups/>
+   },
+   {
+    path:':header',
+    element:<News/>
    }
   ]
 },
@@ -36,7 +48,9 @@ const router = createBrowserRouter([{
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
    <RouterProvider router={router}/>
+   </Provider>
   </React.StrictMode>
 );
 

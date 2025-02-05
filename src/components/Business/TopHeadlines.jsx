@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header'
-import joe from './joe.webp'
 import { fetchNews, ShowData } from '../utils/utils'
 import { Link } from 'react-router-dom'
 import Footer from '../Footer/Footer'
@@ -33,14 +32,14 @@ export default function TopHeadlines() {
   return (
     <div className='w-full'>
          <div className='mt-28 p-2'>
-            <div className=' text-2xl font-semibold text-slate-500 border-b-2 border-e-2 border-s-2 text-center mb-4'>Business News</div>
+            <div className=' text-lg text-gray-700 font-semibold border-b-2 border-e-2 border-s-2 text-center mb-4'>Business News</div>
                     {/* Fetch Business News */}
              <div className='mb-8' >
                  <ShowData newsArray={business}/>
                  </div>
           {/*  Fetch other types of News */}
           <div >
-            <div className=' text-2xl font-semibold text-slate-500 border-b-2 text-center mb-4'>More For You </div>
+            <div className='text-lg text-gray-700 font-semibold border-b-2 text-center mb-4'>More For You </div>
                  <ShowData newsArray={more}/>
                  </div>
         </div>
